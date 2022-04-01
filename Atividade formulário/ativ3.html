@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <form>
+        <table>
+            <tr>
+                <td><label for="name">Nome: </label></td>
+                <td><input type="text" required="true"></td>             
+            </tr>
+            <tr>
+                <td><label for="sobrenome">Sobrenome: </label></td>
+                <td><input type="text" required="true"></td>             
+            </tr>
+            <tr>
+                <td><label for="endereco">Endereço: </label></td>
+                <td><textarea name="endereco" id="endereco" cols="25" rows="4" required="true"></textarea></td>             
+            </tr>
+            <tr>
+                <td><label for="disciplina">Disciplinas: </label></td>
+                <td><input type="checkbox" name="" id="">Programação<br>
+                    <input type="checkbox" name="" id="">Lógica<br>
+                    <input type="checkbox" name="" id="">Algoritmos<br>
+                    <input type="checkbox" name="" id="">Banco de dados<br>
+                    <input type="checkbox" name="" id="">Mobile<br></td>
+            </tr>
+            <tr>
+                <td><label for="genero">Gênero: </label></td>
+                <td><input type="radio" name="" id="">Masculino 
+                    <input type="radio" name="" id="">Feminino
+                    <input type="radio" name="" id="">Não Informar</td>
+            </tr>
+            <tr>
+                <td>Idade: </td>
+                <td><select>
+                    <option value="selecione">Selecione</option>
+                    <option value="18">18</option>
+                    <option value="18">19</option>
+                    <option value="18">20</option>
+                    <option value="18">21</option>
+                    <option value="18">22</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="">Foto do Perfil: </label></td>
+                <td><input type="file" name="arquivo" id="" required="true"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="alerta()">Cadastrar</button></td>
+                <td><button type="reset">Limpar</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function alerta(){
+            alert("Cadastro realizado com sucesso")
+        }
+    </script>
+</body>
+</html>
