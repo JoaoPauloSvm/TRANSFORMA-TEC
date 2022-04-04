@@ -1,0 +1,29 @@
+p{
+    color: chocolate;
+}
+.botao{
+    color: darkseagreen;
+    background-color: teal;
+    border-radius: 5px;
+    border-color: teal;
+}
+.rotulo{
+    color: darkseagreen;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.entrada{
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+th{
+    color: darkseagreen;
+    font-size: 15px;
+}
+table{
+    border: 1px solid darkgrey;
+}
+td{
+    border: 1px solid darkgrey;
+    text-align: center;
+}
