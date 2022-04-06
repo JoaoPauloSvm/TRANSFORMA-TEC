@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página responsivo</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: bisque;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header {
+            background-color: coral;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: cornflowerblue;
+            color: antiquewhite;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: lightblue;
+        }
+
+        .aside {
+            background-color: lightblue;
+            padding: 10px;
+            color: chocolate;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .footer {
+            background-color: cadetblue;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        .color-center{
+            background-color: cadetblue;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+        .col-2 {
+            width: 16.66%;
+        }
+        .col-3 {
+            width: 25%;
+        }
+        .col-4 {
+            width: 33.33%;
+        }
+        .col-5 {
+            width: 41.66%;
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .col-7 {
+            width: 58.33%;
+        }
+        .col-8 {
+            width: 66.66%;
+        }
+        .col-9 {
+            width: 75%;
+        }
+        .col-10 {
+            width: 83.33%;
+        }
+        .col-11 {
+            width: 91.66%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+            body{
+                background-color: darkseagreen;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+        <h1>Título</h1>
+        </div>
+
+        <div class="row">
+        <div class="col-3 menu">
+            <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+            </ul>
+        </div>
+
+        <div class="col-6 color-center">
+            <h1>Título do corpo</h1>
+            <p>
+            Texto do corpo
+            </p>
+        </div>
+
+        <div class="col-3 ">
+            <div class="aside">
+            <h2>Titulo 1</h2>
+            <p>Texto 1</p>
+            <h2>Texto 2</h2>
+            <p>Texto 3</p>
+            <h2>Titulo 4</h2>
+            <p>Texto 4</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer">
+        <p>
+            Texto de rodapé
+        </p>
+        </div>
+    </body>
+</html>
