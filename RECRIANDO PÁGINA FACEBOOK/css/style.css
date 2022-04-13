@@ -122,22 +122,27 @@ form input:focus{
     font-family: Arial, Helvetica, sans-serif;
 }
 /*responsividade*/
-@media(max-width: 950px){
+@media(max-width:950px){
+
     .container{
         flex-direction: column;
     }
+
     .left{
-        width: 400px;
-        align-content: center;
-        align-items: center;
+        width:400px;
+        align-content:center;
+        align-items:center;
     }
+
     .left p{
         height: 75px;
         font-size: 20px;
     }
+
 }
 
-@media(max-width: 500px){
+@media(max-width:500px){
+
     .right{
         display: flex;
         flex-direction: column;
@@ -145,10 +150,11 @@ form input:focus{
         align-items: center
     }
 
+    
     form{
-        width: 350px;
+        width:350px;
         align-content: center;
-        align-items: center;
+        align-items:center;
     }
 }
 
@@ -157,7 +163,7 @@ form input:focus{
         display: flex;
         justify-content:center;
     }
-    
+
     .left{
         display: flex;
         justify-content: center;
@@ -181,4 +187,5 @@ form input:focus{
     form input, .right__forget, .right__loginBtn, .right__signupBtn{
         font-size: 12px;
     }
+    /* Responsividade adicionada */
 }
