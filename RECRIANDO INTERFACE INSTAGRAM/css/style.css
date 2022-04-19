@@ -108,3 +108,37 @@ body{
 .app__platform:nth-child(2){
     background-image: url('../img/apple-button.png');
 }
+
+@media (max-width: 1024px){
+    .container{
+        width: 90%;
+    }
+}
+@media(max-width: 650px){
+    body{
+        background-color: white;
+    }
+    .container{
+        width: 90%;
+    }
+    .phone{
+        display: none;
+    }
+    .continue{
+        width: 100%; 
+    }
+    .continue__group{
+        border: 1px solid transparent;
+    }
+}
+@media(max-width: 400px){
+    .container{
+        width: 100%;
+    }
+    .phone{
+        display: none;
+    }
+    .app{
+        display: none;
+    }
+}
