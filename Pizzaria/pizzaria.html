@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 5px;
+            
+        }
+
+        .btn{
+            width: 100%;
+            background-color: antiquewhite;
+        }
+
+        body{
+            background-color: cornflowerblue;
+        }
+
+        h1, h2, label{
+            color: antiquewhite;
+        }
+
+        h2, h1{
+            font-size: 24px;
+        }
+
+        input, select, textarea{
+            
+            background-color: antiquewhite;
+        }
+
+    </style>
+    <title>Pedido de Pizza</title>
+</head>
+<body>
+    <div style="width: 50%;">
+        <h1>Pizzaria Transfoma TEC</h1>
+
+        <form action="" id="formulario">
+            <div class="input-group">
+                <label for="name">Nome</label><br>
+                <input id="name" name="name" type="text">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email">
+
+            </div>
+            <div class="input-group">
+                <label for="phone">Telefone</label><br>
+                <input type="number" name="phone" id="phone">
+
+            </div>
+            <div class="input-group">
+                <label for="size">Tamanho</label><br>
+                <select name="size" id="size">
+                    <option>Pequena</option>
+                    <option>Média</option>
+                    <option>Grande</option>
+                    <option>Gigante</option>
+                </select>
+
+            </div>
+            <div class="input-group">
+                <label for="border">Sabor da borda</label><br>
+                <select name="border" id="border">
+                    <option>Chocolate</option>
+                    <option>Cheedar</option>
+                    <option>Catupiry</option>
+                    <option>Sem borda</option>
+                </select>
+
+            </div>
+            <div class="input-group">
+                <label for="border-thick">Espessura da massa</label>
+                <br>
+                <select id="border-thick" name="border-thick">
+                    <option>Fina</option>
+                    <option>Média</option>
+                    <option>Grossa</option>
+                </select>
+
+            </div>
+            <div class="input-group">
+                <label >Sabores</label>
+                <br>
+                <input id="calabresa" name="taste" type="checkbox" value="calabresa"/>
+                <label>Calabresa</label><br>
+                <input id="mussarela" name="taste" type="checkbox" value="mussarela"/>
+                <label>Mussarela</label>
+                <br>
+                <input id="quatro-queijos" name="taste" type="checkbox" value="quatro-queijos"/>
+                <label>Quatro queijos</label>
+                <br>
+                <input id="moda-da-casa" name="taste" type="checkbox" value="moda-da-casa"/>
+                <label>Moda da casa</label>
+                <br>
+                <input id="bacon" name="taste" type="checkbox" value="bacon"/>
+                <label>Bacon</label>
+                <br>
+                <input id="palmito" name="taste" type="checkbox" value="palmito"/>
+                <label>Palmito</label>
+
+
+            </div>
+            <div class="input-group">
+                <label>Observações</label><br>
+                <textarea name="message" id="message" cols="35" rows="3"></textarea>
+
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn">Pedir!</button>
+                <button type="reset" class="btn">Limpar Campos!</button>
+            </div>
+        </form>
+
+        <div class="results">
+            <h2>Detalhes do pedido</h2>
+            <pre style="color: antiquewhite; font-size: 24px;"></pre>
+        </div>
+
+    </div>
+</body>
+
+
+<script>
+
+    const form = document.getElementById('formulario')
+    form.addEventListener('submit', getPizza)
+
+
+    function getPizza(event){
+        event.preventDefault()
+        const data = new FormData(event.target)
+        const formJson = Object.fromEntries(data.entries())
+        formJson.taste = data.getAll('taste')
+
+        const results = document.querySelector('pre')
+        results.innerHTML = JSON.stringify(formJson, null, 2)
+
+    }
+</script>
+</html>
